@@ -1,0 +1,138 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+
+/* Navbar */
+
+div.navbar {
+  /* height: 40px; */
+  width: 50px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+}
+
+/* Nav container */
+
+@keyframes flipOnLoad {
+  0% {
+  transform: scaleX(-1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+div.menu-container {
+  animation: flipOnLoad .5s .3s 1;
+  animation-timing-function: ease-in;
+  border: 1px solid rgba(0,0,0,1);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  padding-top: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+div.line {
+  border-bottom: 1.3px solid black;
+  height: 6px;
+  width: 100%;
+  margin-bottom: 3px;
+}
+
+
+/* Head  */ 
+
+div.head {
+  background-image: url('img/577.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+div.container {
+  margin: auto;
+  position: relative;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+/* Main */
+
+div.main {
+  height: 1000px;
+}
+
+
+
+/* Fonts */
+
+h1 {
+  text-align: center; 
+  color: black;
+  font-size: 60px;
+}
+
+p.head {
+  text-align: center;
+  color: black;
+}
+
+h4.head {
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 0px;
+  font-weight: 400;
+}
+
+/* font awesome fonts and emojis */
+.font-awesome {
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+.bottom-div {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+
+
+
