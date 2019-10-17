@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,6 +11,8 @@ class Head extends Component {
       height: 0,
       random: true
     };
+
+    this.handleStartClick = this.handleStartClick.bind(this);
   }
 
   componentDidMount() {
@@ -17,12 +20,20 @@ class Head extends Component {
     window.addEventListener('resize', this.resize);
     var height = this.divElement.clientHeight;
     this.setState({ height });
+    console.log(this.state.height)
+  }
+
+  handleStartClick() {
+    console.log('click');
+    console.log('height', this.state.height);
+    window.scroll({ top: this.state.height, left: 0, behavior: "smooth" })
   }
 
   updateHeight() {
     this.setState({ random: false });
     var height = this.divElement.clientHeight;
     this.setState({ height });
+    console.log(this.state.height);
   }
 
   resize = () => {
@@ -48,10 +59,24 @@ class Head extends Component {
             in San Francisco. Below are some projects of mine, please take a
             look!
           </p>
+          <p className="head-react">Built in React</p>
+          <div class="react-container">
+            <span class="react-logo">
+              <span class="nucleo"></span>
+            </span>
+          </div>
         </div>
         <div className="bottom-div">
-          <h4 className="head">Get started</h4>
-          <FontAwesomeIcon className="font-awesome" icon={faCaretDown} />
+            <div className="bottom-link" onClick={this.handleStartClick}>
+              <h4 className="head">Get started</h4>
+              <FontAwesomeIcon className="font-awesome" icon={faCaretDown} />
+            </div>
+          <p className="attribute">
+            {' '}
+            <a href="https://www.freepik.com/free-photos-vectors/background">
+              vector created by rawpixel.com
+            </a>{' '}
+          </p>
         </div>
       </div>
     );
