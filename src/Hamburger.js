@@ -36,10 +36,20 @@ const MenuHeader = styled.div`
 class Hamburger extends Component {
   constructor(props) {
     super(props);
+    
     this.state = {
       toggleState: 0
     };
     this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentDidUpdate() {
+
+    if (!this.props.hamburger) {
+      this.setState({
+        toggleState: 0
+      })
+    }
   }
 
   handleClick() {
@@ -47,8 +57,16 @@ class Hamburger extends Component {
     this.setState({
       toggleState: this.state.toggleState ? 0 : 1
     });
+    if (!this.props.hamburger) {
+      this.props.hamburgerOn();
+    }
+    else {
+      this.props.hamburgerOff();
+    }
   }
   render() {
+    console.log('hamburger state', this.props.hamburger)
+    console.log('props',this.props)
     return (
       <div
         className="hamburger-container"

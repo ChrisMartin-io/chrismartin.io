@@ -60,9 +60,9 @@ class Head extends Component {
             look!
           </p>
           <p className="head-react">Built in React</p>
-          <div class="react-container">
-            <span class="react-logo">
-              <span class="nucleo"></span>
+          <div className="react-container">
+            <span className="react-logo">
+              <span className="nucleo"></span>
             </span>
           </div>
         </div>

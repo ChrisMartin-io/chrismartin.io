@@ -180,7 +180,7 @@ body {
   border: 10px solid #00d8ff;
 
   animation-name: rotate;
-  animation-duration: 2s;
+  animation-duration: 1.8s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
 }
@@ -227,7 +227,7 @@ body {
 
 @keyframes rotate {
   100% {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
   }
 }
 
