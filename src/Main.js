@@ -21,9 +21,21 @@ class Main extends Component {
 
   render() {
     return (
-      <div className="main">
-        Main
-        <button onClick={this.props.changeNav}>Button</button>
+      <div className="about">
+        <h2 className="about">About me</h2>
+        <p>
+          I'm Chris and I live in San Francisco. I love music, sports, design & coding. Working with others towards a common goal is <i>the best</i>.
+        </p>
+        <h3>
+          Technologies
+        </h3>
+        <p>Javascript, Python, SQL, Ruby, HTML, CSS</p>
+        <p>React, Redux, Node, Express, Flask, PostgreSQL, SQLAlchemy, Jest, Git</p>
+        <img
+          src={require('./img/chris.png')}
+          alt="Chris"
+          className="about"
+        ></img>
       </div>
     );
   }

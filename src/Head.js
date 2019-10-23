@@ -71,12 +71,6 @@ class Head extends Component {
               <h4 className="head">Get started</h4>
               <FontAwesomeIcon className="font-awesome" icon={faCaretDown} />
             </div>
-          <p className="attribute">
-            {' '}
-            <a href="https://www.freepik.com/free-photos-vectors/background">
-              vector created by rawpixel.com
-            </a>{' '}
-          </p>
         </div>
       </div>
     );

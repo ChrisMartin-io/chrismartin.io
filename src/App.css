@@ -83,8 +83,8 @@ div.head {
 div.container {
   margin: auto;
   position: relative;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 15%;
+  padding-right: 15%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -93,19 +93,67 @@ div.container {
 /* Main */
 
 div.main {
-  height: 1000px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   padding-left: 10%;
   padding-right: 10%;
 }
 
-/* Fonts */
+/* About */
+
+div.about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15%;
+  padding-right: 15%;
+  justify-content: space-between;
+}
+
+img.about {
+  max-width: 400px;
+  border-radius: 200px;
+  align-self: flex-end;
+  justify-self: flex-end;
+  opacity: .5;
+}
+
+/***** Projects *****/
+
+div.projects {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+div.project {
+  width: 250px;
+  height: 200px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+}
+
+div.project > h5 {
+  font-size: 30px;
+  margin: 0;
+}
+div.project > p {
+  font-size: 13px;
+}
+
+/********* Fonts ***********/
 
 h1 {
   text-align: center;
   color: black;
   font-size: 60px;
+}
+h2 {
+  font-size: 40px;
 }
 
 p.head {
@@ -283,3 +331,4 @@ hr.menu {
   background-color: white;
   transform: rotate(90deg) translate(9px, 10px);
 }
+

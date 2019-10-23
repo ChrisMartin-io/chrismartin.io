@@ -43,26 +43,20 @@ class Hamburger extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  componentDidUpdate() {
+  // componentDidUpdate() {
 
-    if (!this.props.hamburger) {
-      this.setState({
-        toggleState: 0
-      })
-    }
-  }
+  //   if (!this.props.hamburger) {
+  //     this.setState({
+  //       toggleState: 0
+  //     })
+  //   }
+  // }
 
   handleClick() {
     this.refs.container.classList.toggle('change');
     this.setState({
       toggleState: this.state.toggleState ? 0 : 1
     });
-    if (!this.props.hamburger) {
-      this.props.hamburgerOn();
-    }
-    else {
-      this.props.hamburgerOff();
-    }
   }
   render() {
     console.log('hamburger state', this.props.hamburger)
@@ -92,6 +86,7 @@ class Hamburger extends Component {
                 {' '}
                 <img className="menu" src={require('./img/c.png')} alt="logo" />
               </Link>
+              <MenuHeader>About</MenuHeader>
               <MenuHeader>Projects</MenuHeader>
               <hr className="menu"></hr>
               <Link>r13 Resource</Link>

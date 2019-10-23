@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Main from './Main';
 import Head from './Head';
 import Hamburger from './Hamburger';
+import Projects from './Projects';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -81,6 +82,7 @@ class App extends React.Component {
           />
           <Head />
           <Main changeNav={this.changeNav} />
+          <Projects />
         </div>
       );
     }
