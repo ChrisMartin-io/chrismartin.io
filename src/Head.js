@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import {
+  useScrollYPosition
+} from 'react-use-scroll-position';
 
 class Head extends Component {
   constructor(props) {
@@ -9,7 +12,8 @@ class Head extends Component {
 
     this.state = {
       height: 0,
-      random: true
+      random: true,
+      scrollY: 0
     };
 
     this.handleStartClick = this.handleStartClick.bind(this);
@@ -18,15 +22,27 @@ class Head extends Component {
   componentDidMount() {
     // Event listener for window resize
     window.addEventListener('resize', this.resize);
+    window.addEventListener('scroll', this.handleScroll, true);
     var height = this.divElement.clientHeight;
     this.setState({ height });
     console.log(this.state.height)
+  }
+
+  handleScroll = () => {
+    this.forceUpdate();
+    this.updateScroll();
   }
 
   handleStartClick() {
     console.log('click');
     console.log('height', this.state.height);
     window.scroll({ top: this.state.height, left: 0, behavior: "smooth" })
+  }
+
+  updateScroll() {
+    var scrollY = useScrollYPosition();
+    this.setState({ scrollY });
+    console.log(this.state.scrollY);
   }
 
   updateHeight() {
@@ -49,6 +65,7 @@ class Head extends Component {
       <div className="head" ref={divElement => (this.divElement = divElement)}>
         <div className="container">
           <p className="head">Head Height: {this.state.height}</p>
+          <p className="head">Scroll position: {this.state.scrollY}</p>
 
           <h1>Chris Martin</h1>
           <span className="font-awesome" role="img" aria-label="hand-wave">
